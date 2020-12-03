@@ -5,9 +5,9 @@ This project helps navigate between projects in the command line.
 
 ## How to Use
 
-### `add_project`  
+### `add_project` Function
 
-There are two ways to add a new project.
+There are two ways to add a new project. Both rely on the function `add_project`.
 
 #### Specify Destination
 
@@ -31,7 +31,7 @@ Simply type one of the project aliases that were added in the terminal.
 
 For instance, after running `add_project Desktop Desktop`, the alias `Desktop` changes to the Desktop.
 
-### `projects`
+### `projects` Function
 
 List current projects that are aliased. This can be useful when navigating to old projects.
 
@@ -43,7 +43,7 @@ projects
 
 ## Setup
 
-The `setup.sh` script covers all the setup before use. Clone the repo and run the following commands
+The `setup.sh` script covers all the setup before use. Clone the repo and run the following commands.
 
 ```zsh
 git clone <repo_name>
