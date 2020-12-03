@@ -33,7 +33,7 @@ For instance, after running `add_project Desktop Desktop`, the alias `Desktop` c
 
 ### `projects`
 
-List current projects that are aliased. This can be useful when navigating to old projects. 
+List current projects that are aliased. This can be useful when navigating to old projects.
 
 ```zsh
 projects
@@ -42,6 +42,8 @@ projects
 
 
 ## Setup
+
+The `setup.sh` script covers all the setup before use. Clone the repo and run the following commands
 
 ```zsh
 git clone <repo_name>
