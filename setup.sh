@@ -5,7 +5,7 @@ then
 
     local cmd="source $projects_file"
 
-    echo $cmd >> ~/.zshrc
+    echo -e "# Project Navigation\n$cmd" >> ~/.zshrc
     echo "Added to start-up script."
 else
     echo "Scripts only work with zsh shell."
