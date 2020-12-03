@@ -17,6 +17,8 @@ add_project <alias> <location>
 
 When specifying a location relative to the home directory, the alias name becomes a command to navigate to that directory.
 
+For instance, after running `add_project Desktop Desktop`, the command `Desktop` changes to the Desktop in the terminal.
+
 #### Current Directory
 
 ```zsh
@@ -25,20 +27,23 @@ add_project <alias>
 
 Running `add_project` with just an alias creates a shortcut to the current directory.
 
-### Navigation
-
-Simply type one of the project aliases that were added in the terminal.
-
-For instance, after running `add_project Desktop Desktop`, the alias `Desktop` changes to the Desktop.
+If I am currently in the directory `~/Desktop/CodeReview/` and would like make an alias `code_review`, the command `add_project code_review` will create the alias.
 
 ### `projects` Function
 
-List current projects that are aliased. This can be useful when navigating to old projects.
+There is the functionality to list all the projects that have aliases. This can be useful when navigating to old projects.
 
 ```zsh
 projects
 # Desktop:location/to/Desktop
+# code_review:location/to/Desktop/CodeReview
 ```
+
+### `make_alias.sh` File
+
+Any alias that is created is stored in the file `make_alias.sh`. This file is run upon terminal start up.
+
+Any projects added will automatically get appended to this file.
 
 
 ## Setup
