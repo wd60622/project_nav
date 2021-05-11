@@ -7,6 +7,10 @@ then
     touch $PROJECT_PATH
 fi
 
+function edit_projects() {
+    open $PROJECT_PATH
+}
+
 projs=()
 function add_project() {
     if [ $# -eq 0 ]; then
