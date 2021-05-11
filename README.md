@@ -51,7 +51,7 @@ Any projects added will automatically get appended to this file.
 The `setup.sh` script covers all the setup before use. Clone the repo and run the following commands.
 
 ```zsh
-git clone <repo_name>
+git clone https://github.com/wdeanHPA/project_nav.git
 cd project_nav
 source setup.sh
 ```
