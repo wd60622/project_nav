@@ -3,7 +3,7 @@
 
 This project helps navigate between projects in the command line.
 
-## How to Use
+## How To Use
 
 ### `add_project` Function
 
@@ -43,7 +43,7 @@ projects
 
 If you would like to edit the project list in a text editor, the function `edit_projects` opens the `make_alias.sh` file.
 
-## How it works
+## How It Works
 
 Any alias that is created is stored in the file `make_alias.sh`. This file is run upon terminal start up.
 
