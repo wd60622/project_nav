@@ -39,6 +39,10 @@ projects
 # code_review:location/to/Desktop/CodeReview
 ```
 
+### `edit_projects` Function
+
+If you would like to edit the project list in a text editor, the function `edit_projects` opens the `make_alias.sh` file.
+
 ### `make_alias.sh` File
 
 Any alias that is created is stored in the file `make_alias.sh`. This file is run upon terminal start up.
