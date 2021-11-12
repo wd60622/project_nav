@@ -81,6 +81,6 @@ folders:
         second_project: $PROJECTS/second_project
 ```
 
-In this example file, the `DESKTOP` and `PROJECTS` aliases are defined and can be used like the `$HOME` and `~` variables. This is done in the `aliases` section of the file.
+In this example file, the `DESKTOP` and `PROJECTS` aliases are defined. These are not shortcuts but can be used like the `$HOME` and `~` variables. Any abbreviations of folders can be defined in `aliases` section of the file.
 
-This file also defines shortcuts for the Desktop, Misc, and Downloads folders as well as two project folders. 
+This file also defines shortcuts for the Desktop, Misc, and Downloads folders in the `General` group as well as two project folders in the `Projects` group.
