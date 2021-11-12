@@ -3,59 +3,84 @@
 
 This project helps navigate between projects in the command line.
 
-## How To Use
-
-### `add_project` Function
-
-There are two ways to add a new project. Both rely on the function `add_project`.
-
-#### Specify Destination
-
-```zsh
-add_project <alias> <location>
-```
-
-When specifying a location relative to the home directory, the alias name becomes a command to navigate to that directory.
-
-For instance, after running `add_project Desktop Desktop`, the command `Desktop` changes to the Desktop in the terminal.
-
-#### Current Directory
-
-```zsh
-add_project <alias>
-```
-
-Running `add_project` with just an alias creates a shortcut to the current directory.
-
-If I am currently in the directory `~/Desktop/CodeReview/` and would like make an alias `code_review`, the command `add_project code_review` will create the alias.
-
-### `projects` Function
-
-There is the functionality to list all the projects that have aliases. This can be useful when navigating to old projects.
-
-```zsh
-projects
-# Desktop:location/to/Desktop
-# code_review:location/to/Desktop/CodeReview
-```
-
-### `edit_projects` Function
-
-If you would like to edit the project list in a text editor, the function `edit_projects` opens the `make_alias.sh` file.
-
-## How It Works
-
-Any alias that is created is stored in the file `make_alias.sh`. This file is run upon terminal start up.
-
-Any projects added will automatically get appended to this file. Again, the function `edit_projects` can be run in terminal to open the `make_alias.sh` file.
-
-
 ## Setup
 
-The `setup.sh` script covers all the setup before use. Clone the repo and run the following commands.
+The `setup.sh` script covers all the setup. Clone the repo and run the following commands.
 
 ```zsh
 git clone https://github.com/wdeanHPA/project_nav.git
 cd project_nav
 source setup.sh
 ```
+
+This will add a sourcing command to your start-up script and create the `nav` command.
+
+This project requires `zsh` shell as well as `python` and `pip`.
+
+## How To Use
+
+Type `nav` to see the whole list of commands available.
+
+### Creating Project Aliases
+
+The `nav create` command will create an alias for a project from the command line. It can be used in a few ways.
+
+#### 1. Create an alias for the current directory
+The command `nav create <alias>` creates an alias to navigate to the *current working directory* with the given alias.
+
+That is, after reloading the terminal, typing `<alias>` in the terminal will `cd` into the previous working directory.
+
+#### 2. Create an alias for specific directory
+
+The `destination` option will specify where the alias will `cd`. Here is an example to create a Desktop alias.
+
+```shell
+nav create --destination $HOME/Desktop <desktop-alias>
+```
+
+**NOTE:** The `$HOME` environment variable can be used in the destination. By default, `$HOME` and `~` are replaced with the environment variable `$HOME`.
+
+### Grouping the Aliases
+
+Each project has a group name which has a default name `General`. If some other group name is desired, the `group-name` option can be specified.
+
+Below is example of creating a project alias under a `Projects` group from within that projects root folder.
+
+```shell
+nav create --group-name Projects <project-alias>
+```
+
+### Viewing Aliases
+
+The `nav list` command will display all defined shortcuts.
+
+They are stored in the hidden folder `~/.nav` in the yaml file `make_alias.yaml`. To view the file, use the command `nav open`. This file can be alternative way to create projects.
+
+
+### The Alias File
+
+The `make_alias.yaml` file contains two sections: `folders` and `aliases`.
+
+The `folders` sections contains each group and all the aliases created and the `aliases` section defines additional shortcuts to be used in the shortcuts.
+
+Below is an example of that file.
+
+```
+aliases:
+    DESKTOP: $HOME/Desktop
+    PROJECTS: $DESKTOP/Markets
+
+folders:
+    General:
+        Desktop: $DESKTOP
+        Misc: $DESKTOP/Misc
+        Downloads: $HOME/Downloads
+
+    Projects:
+        first_project: $PROJECTS/first_project
+        second_project: $PROJECTS/second_project
+```
+
+In this example file, the `DESKTOP` and `PROJECTS` aliases are defined. These are not shortcuts but can be used like the `$HOME` and `~` variables. Any abbreviations of folders can be defined in `aliases` section of the file.
+
+This file also defines shortcuts for the Desktop, Misc, and Downloads folders in the `General` group as well as two project folders in the `Projects` group.
