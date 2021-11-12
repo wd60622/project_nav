@@ -26,9 +26,9 @@ Type `nav` to see the whole list of commands available.
 The `nav create` command will create an alias for a project from the command line. It can be used in a few ways.
 
 #### 1. Create an alias for the current directory
-The command `nav create <alias>` create an alias to navigate to the *current working directory* with the given alias.
+The command `nav create <alias>` creates an alias to navigate to the *current working directory* with the given alias.
 
-After reloading the terminal, typing `<alias>` in the terminal will `cd` into the previous working directory.
+That is, after reloading the terminal, typing `<alias>` in the terminal will `cd` into the previous working directory.
 
 #### 2. Create an alias for specific directory
 
@@ -72,5 +72,4 @@ folders:
 aliases:
     DESKTOP: $HOME/Desktop
     PROJECTS: $DESKTOP/Markets
-
 ```
