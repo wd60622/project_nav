@@ -56,9 +56,20 @@ The `nav list` command will display all defined shortcuts.
 
 They are stored in the hidden folder `~/.nav` in the yaml file `make_alias.yaml`. To view the file, use the command `nav open`. This file can be alternative way to create projects.
 
-Below is an example version of the file.
+
+### The Alias File
+
+The `make_alias.yaml` file contains two sections: `folders` and `aliases`.
+
+The `folders` sections contains each group and all the aliases created and the `aliases` section defines additional shortcuts to be used in the shortcuts.
+
+Below is an example of that file.
 
 ```
+aliases:
+    DESKTOP: $HOME/Desktop
+    PROJECTS: $DESKTOP/Markets
+
 folders:
     General:
         Desktop: $DESKTOP
@@ -68,8 +79,8 @@ folders:
     Projects:
         first_project: $PROJECTS/first_project
         second_project: $PROJECTS/second_project
-
-aliases:
-    DESKTOP: $HOME/Desktop
-    PROJECTS: $DESKTOP/Markets
 ```
+
+In this example file, the `DESKTOP` and `PROJECTS` aliases are defined and can be used like the `$HOME` and `~` variables. This is done in the `aliases` section of the file.
+
+This file also defines shortcuts for the Desktop, Misc, and Downloads folders as well as two project folders. 
