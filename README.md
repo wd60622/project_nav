@@ -54,7 +54,7 @@ nav create --group-name Projects <project-alias>
 
 The `nav list` command will display all defined shortcuts.
 
-They are stored in the hidden folder `~/.nav` in the yaml file `make_alias.yaml`. To view the file, use the command `nav open`. This file can be alternative way to create projects.
+They are stored in the hidden folder `~/.nav` in the yaml file `make_alias.yaml`. To view the file, use the command `nav open`. This file can be alternative way to create and modifying project shortcuts.
 
 
 ### The Alias File
