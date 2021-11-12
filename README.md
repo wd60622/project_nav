@@ -38,7 +38,7 @@ The `destination` option will specify where the alias will `cd`. Here is an exam
 nav create --destination $HOME/Desktop <desktop-alias>
 ```
 
-**NOTE:** The `$HOME` environment variable can be used in the destination. By default, `$HOME` and `~` are replaced with the environment variable `$HOME`.
+**NOTE:** The `$HOME` keyword can be used in the destination. By default, `$HOME` and `~` are replaced with the environment variable `$HOME`.
 
 ### Grouping the Aliases
 
