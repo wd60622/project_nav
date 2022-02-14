@@ -6,7 +6,7 @@ setup(
     name="project-nav",
     version="0.0.1",
     author="William Dean",
-    author_email="wdean@homepartners.com",
+    author_email="wd60622@gmail.com",
     description="Quickly navigate between project directories.",
     packages=["project_nav"],
     scripts=["scripts/nav"],
